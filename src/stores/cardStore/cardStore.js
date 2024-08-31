@@ -12,7 +12,8 @@ export const CardStore = createStore((set) => ({
         throw new Error('Failed to fetch data from API')
       }
       const data = await response.json()
-      set({data: data.data, loading: false })
+      console.log(data, 'data')
+      set({data: data, loading: false })
     } catch (error) {
       set({ error: error.message, loading: false })
     }

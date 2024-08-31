@@ -12,7 +12,11 @@ export default function Products(){
 
     useEffect(() => {
         fetchData()
-    }, [fetchData])
+    }, [])
+
+    useEffect(() => {
+        console.log(data, 'data') 
+    }   , [data])   
 
     if (loading){
         return <div>Loading...</div>
@@ -21,16 +25,26 @@ export default function Products(){
         return <div>Error: {error}</div>
     } 
 
-    // const resData = await fetch("https://kamil123456780.pythonanywhere.com/api/hotel_rooms/")
-    // const data = await resData.json()
-
-    console.log(data)
-
     return(
         <>
         <Container>
             <div className="grid gap-[40px] grid-cols-4 "> 
-                <h1>{data.title}</h1>
+                <div className="bg-[white]">
+                    {data?.banners?.map((item) => (
+                        <p key={item.id}>{item?.title}</p>
+                    ))}
+                </div>
+                <div className="bg-[white]">
+                    {data?.events?.map((item) => (
+                        <p key={item.id}>{item?.title}</p>
+                    ))}
+                </div>
+                <div className="bg-[white]">
+                    {data?.hotel_rooms?.map((item) => (
+                        <p key={item.id}>{item?.title}</p>
+                    ))}
+                </div>
+                {/* <h1>{data.title}</h1> */}
                 {/* {res.map((item) => (
                     <ProductCard
                         // key={item.id}
