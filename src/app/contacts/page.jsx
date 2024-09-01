@@ -1,7 +1,7 @@
-import Header from "../components/header"
-import MainSlider from "../components/swiper/slider"
+import Header from "../../components/header"
+import MainSlider from "../../components/swiper/slider"
 import classes from "../styles/Contacts.module.scss"
-import Container from "../components/ui/Container/Container"
+import Container from "../../components/ui/Container/Container"
 
 export default function Contacts(){
 

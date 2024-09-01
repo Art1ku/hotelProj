@@ -1,10 +1,9 @@
 
-import classes from "../../styles/Header.module.scss"
+import classes from "./Header.module.scss"
 import Link from "next/link"
 import { Input } from "@mui/material"
-import { SignIn } from "../features/signin/SignIn"
-import { SignUp } from "../features/singup/SignUp"
-
+import { HeaderLogin } from "./HeaderLogin"
+ 
 export default function Header(){
 
     const navigationContent = [
@@ -59,8 +58,7 @@ export default function Header(){
                                 </div>
                             </div>
                             <div className={classes.profile}>
-                                {/* <SignIn />
-                                <SignUp /> */}
+                                <HeaderLogin />
                             </div>
                         </div>
                     </div>

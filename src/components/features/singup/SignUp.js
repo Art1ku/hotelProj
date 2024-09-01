@@ -1,17 +1,13 @@
 'use client'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button, Input } from "antd"
 import CustomModal from "../../ui/modal"
 
-export default function SignIn(){
+export default function SignUp(){
 
     const [isOpen, setisOpen] = useState(false)
 
     const [authData, setAuthData] = useState({
-        username: {
-            value: '',
-            error: false,
-        },
         phone_number: {
             value: '',
             error: false,
@@ -25,7 +21,6 @@ export default function SignIn(){
     })
 
     const postData = {
-        username: '',
         phone_number: '',
         password: '',
     }
@@ -79,20 +74,17 @@ export default function SignIn(){
         return !errorArr.some((item) => item)
     }
 
-    const handleAuth = async () => {
+    const handleAuth = () => {
         if(handleCheckAuthdata()){
-            const result = await fetch('https://kamil123456780.pythonanywhere.com/api/login/', {
+                fetch('https://kamil123456780.pythonanywhere.com/api/register/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(postData),
-                }
-            )
-            const data = await result.json()
-            localStorage.setItem('access', JSON.stringify(data.access))
-            handleClose()
+                })
         }
+        handleClose()
     }
 
     // useEffect(() => {
@@ -101,7 +93,7 @@ export default function SignIn(){
 
     return(
         <>
-            <Button onClick={() => handleOpen()}>Sign In</Button>   
+            <Button onClick={() => handleOpen()}>Sign up</Button>   
             <CustomModal title={'Sign In'} isOpen={isOpen} onCancel={handleClose} onOk={handleAuth}>
                 <div className="flex flex-col gap-[12px] mt-[36px]">
                     <Input status={authData.username.error ? 'error':''} placeholder="Username" onChange={(e) => {handleChange('username', e.target.value)}}/>
