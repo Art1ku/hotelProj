@@ -13,6 +13,7 @@
 }
 .insideWrapper{
     width: 1430px;
+    max-width: 1430px;
     height: 78px;
     padding-left: 50px;
     padding-right: 50px;
@@ -32,7 +33,7 @@
     align-items: center;
 }
 .sHalf{
-    width: 523px;
+    width: 600px;
     height: 53px;
     padding-top: 2px;
     display: flex;
@@ -51,18 +52,23 @@
     width: 400px;
     height: 45px;
     color: white;
+    input{
+        color: white;
+    }
 }
 .phoneNumbers{
     display: flex;
     align-items: center;
     gap: 15px;
+    width: 210px;
 }
 .phoneWrappper{
 
 }
 .payWrapper{
+    width: 150px;
     align-items: center;
-    padding-top: 13px;
+    padding-top: 3px;
 }
 .navigation{
     display: inline-block;
@@ -122,4 +128,8 @@
     display: flex;
     align-items: center;
     vertical-align: middle;
+}
+.profile{
+    width: 200px;
+    height: 200px;
 }

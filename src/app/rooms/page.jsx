@@ -1,5 +1,5 @@
-import Header from "../components/header"
-import MainSlider from "../components/swiper/slider"
+import Header from "../../components/header/Header"
+import MainSlider from "../../components/swiper/slider"
 
 export default function Rooms(){
 

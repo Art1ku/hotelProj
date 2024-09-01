@@ -1,8 +1,8 @@
-
+'use client'
 import classes from "./Header.module.scss"
 import Link from "next/link"
 import { Input } from "@mui/material"
-import { HeaderLogin } from "./HeaderLogin"
+import HeaderLogin from './HeaderLogin'
  
 export default function Header(){
 
@@ -42,7 +42,6 @@ export default function Header(){
                             <Link href={"/"} className={classes.LogoLinkStyle}>
                                 <img className={classes.logoLink} src={"/icons/header/logo.png"} alt="" />
                                 <p className={classes.logoP}>AMETHYST</p>
-                            
                             </Link>
                             <Input className={classes.HotelInput}></Input>
                         </div>
@@ -62,14 +61,14 @@ export default function Header(){
                             </div>
                         </div>
                     </div>
-                    </div>
-                    <div className={classes.nav}>
-                        {navigationContent.map((item, i) => (
-                            <Link className={classes.navigation} key={i} href={item.link}>
-                                <div className={classes.navPart}><p className={classes.navPartP}>{item.title}</p></div>
-                            </Link>
-                        ))}
-                    </div>
+                </div>
+                <div className={classes.nav}>
+                    {navigationContent.map((item, i) => (
+                        <Link className={classes.navigation} key={i} href={item.link}>
+                            <div className={classes.navPart}><p className={classes.navPartP}>{item.title}</p></div>
+                        </Link>
+                    ))}
+                </div>
                 
             </div>
         </>

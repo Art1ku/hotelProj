@@ -40,7 +40,7 @@ const DemoSlider = () => {
   return (
     <section className="w-full">
       <div className="relative h-[571px] bg-white">
-        <ul className="h-[571px] w-full">
+        <ul className="h-[100vh] w-full">
           <Swiper
             navigation = {{nextEl: '.swiper-button-next' , prevEl: '.swiper-button-prev'}}
             pagination={{ type: "bullets", clickable: true }}

@@ -3,13 +3,12 @@ import classes from "./Header.module.scss"
 import SignIn from "../features/signin/SignIn"
 import SignUp from "../features/singup/SignUp"
 import { useStore } from "zustand"
-import ProfileStore from "../../stores/ProfileStore/ProfileStore"
+import { ProfileStore } from "../../stores/ProfileStore/ProfileStore"
 import { useEffect } from "react"
 
 export default function HeaderLogin(){
 
     const access = localStorage.getItem('access') !== 'undefined' ? JSON.parse(localStorage.getItem('access')) : null
-    // const username = (localStorage.getItem('username')) 
 
     const {profile, fetchProfile} = useStore(ProfileStore)
 
@@ -19,7 +18,7 @@ export default function HeaderLogin(){
 
     return(
         <>
-        {/* <div className={classes.profileWrapper}>
+        <div className={classes.profileWrapper}>
             {!access ?
                 <div>
                     <SignIn />
@@ -27,7 +26,7 @@ export default function HeaderLogin(){
                 </div> :
                 <p>{profile?.phone_number}</p>
             }
-        </div> */}
+        </div>
         </>
     )
 }

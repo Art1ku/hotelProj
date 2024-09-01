@@ -8,7 +8,9 @@ export const ProfileStore = createStore((set) => ({
                 headers: {
                     "Authorization": `Bearer ${access}`
                 }
+                
             })
+            console.log(1)
         
             const profile = await profileData.json()
             set({profile: profile})

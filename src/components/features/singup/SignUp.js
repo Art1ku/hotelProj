@@ -94,9 +94,8 @@ export default function SignUp(){
     return(
         <>
             <Button onClick={() => handleOpen()}>Sign up</Button>   
-            <CustomModal title={'Sign In'} isOpen={isOpen} onCancel={handleClose} onOk={handleAuth}>
+            <CustomModal title={'Sign Up'} isOpen={isOpen} onCancel={handleClose} onOk={handleAuth}>
                 <div className="flex flex-col gap-[12px] mt-[36px]">
-                    <Input status={authData.username.error ? 'error':''} placeholder="Username" onChange={(e) => {handleChange('username', e.target.value)}}/>
                     <Input status={authData.phone_number.error ? 'error':''} placeholder="Number" onChange={(e) => {handleChange('phone_number', e.target.value)}}/>
                     <Input status={authData.password.error ? 'error':''} placeholder="Password" onChange={(e) => {handleChange('password', e.target.value)}}/>
                 </div>

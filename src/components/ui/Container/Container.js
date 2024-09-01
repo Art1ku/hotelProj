@@ -6,7 +6,7 @@ export default function Container(props){
 
     return(
         <>
-            <div className="max-w-[90%] m-auto">
+            <div className="max-w-[1430px] m-auto">
                 {children}
             </div>
         </>
