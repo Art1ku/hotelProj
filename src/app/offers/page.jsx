@@ -1,5 +1,7 @@
 import Header from "../../components/header/Header"
 import MainSlider from "../../components/swiper/slider"
+import Footer from "../../components/footer/Footer"
+import SpecOffer from "../../components/features/SpecOffer/SpecOffer"
 
 export default function Offers(){
 
@@ -9,9 +11,10 @@ export default function Offers(){
         <>
             <Header />
             <MainSlider />
-            <div>
+            <SpecOffer />
 
-            </div>
+            
+            <Footer />
         </>
     )
 }

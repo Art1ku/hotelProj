@@ -24,23 +24,23 @@ const DemoSlider = () => {
       fetchData()
   }, [])
 
-  useEffect(() => {
-      console.log(data, 'data') 
-  }   , [data])   
+  // useEffect(() => {
+  //     console.log(data, 'data') 
+  // }   , [data])   
 
-  if (loading){
-      return <div>Loading...</div>
-  }
-  if (error){
-      return <div>Error: {error}</div>
-  } 
+  // if (loading){
+  //     return <div>Loading...</div>
+  // }
+  // if (error){
+  //     return <div>Error: {error}</div>
+  // } 
 
 
 
   return (
-    <section className="w-full">
+    <section className="w-[1535px] m-auto">
       <div className="relative h-[571px] bg-white">
-        <ul className="h-[100vh] w-full">
+        <ul className="h-[70vh] w-[1535px]">
           <Swiper
             navigation = {{nextEl: '.swiper-button-next' , prevEl: '.swiper-button-prev'}}
             pagination={{ type: "bullets", clickable: true }}
@@ -51,18 +51,20 @@ const DemoSlider = () => {
           >
             {data?.banners?.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="h-full w-full absolute left-0 top-0"
-                     style={{
-                      background: `url(${item?.image}) center center / cover scroll no-repeat`,
-                      filter: 'brightness(40%)',
-                     }}>
-                    <div>
-                        <div>
-                          <p key={item.id}>{item?.title}</p>
+                <div className="h-full w-[1535px] max-w-[1535px] absolute left-0 top-0"
+                    style={{
+                      background: `linear-gradient(rgba(0, 0, 0, 0.502), rgba(0, 0, 0, 0.487)), url(${item?.image}) center center / cover scroll no-repeat`,
+                    }}>
+                    <div className={classes.wrapper}>
+                        <div className={classes.Top}>
+                          <p className="text-md sm:text-xl lg:text-3xl font-semibold text-white z-15" key={item.id}>
+                            {item?.title}
+                          </p>
                         </div>
-                        <div>
-                          <p key={item.id}>{item?.description}</p>
-                          <img src={item?.image} alt="" />
+                        <div className={classes.Bottom}>
+                          <p className="text-3xl sm:text-6xl lg:text-8xl font-bold text-white z-15" key={item.id}>
+                            {item?.description}
+                          </p>
                         </div>
                     </div>
                 </div> 

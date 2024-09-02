@@ -11,7 +11,7 @@ export default function SignIn(){
         phone_number: {
             value: '',
             error: false,
-            pattern: /^\+996\d{3}\d{2}-\d{2}-\d{2}$/,
+            pattern: /^\+996\d{3}\d{2}\d{2}\d{2}$/,
         },
         password: {
             value: '',

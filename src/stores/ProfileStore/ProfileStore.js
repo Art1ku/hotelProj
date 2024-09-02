@@ -10,7 +10,7 @@ export const ProfileStore = createStore((set) => ({
                 }
                 
             })
-            console.log(1)
+            // console.log(1)
         
             const profile = await profileData.json()
             set({profile: profile})
