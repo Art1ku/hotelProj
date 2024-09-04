@@ -20,8 +20,9 @@ export default function HeaderLogin(){
         <>
         <div className={classes.profileWrapper}>
             {!access ?
-                <div>
+                <div className={classes.profileInsideWrapper}>
                     <SignIn />
+                    <div className={classes.line}/>
                     <SignUp />
                 </div> :
                 <p>{profile?.phone_number}</p>

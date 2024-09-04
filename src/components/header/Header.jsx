@@ -17,7 +17,7 @@ export default function Header(){
         },
         {
             title: 'Rooms',
-            link: '/rooms'
+            link: '/'
         },
         {
             title: 'Restoraunts',

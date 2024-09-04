@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Button, Input } from "antd"
 import CustomModal from "../../ui/modal"
+import classes from "../signStyle.module.scss"
 
 export default function SignUp(){
 
@@ -15,7 +16,7 @@ export default function SignUp(){
         phone_number: {
             value: '',
             error: false,
-            pattern: /^\+996\d{3}\d{2}-\d{2}-\d{2}$/,
+            pattern: /^\+996\d{3}\d{2}\d{2}\d{2}$/,
         },
         password: {
             value: '',
@@ -98,7 +99,9 @@ export default function SignUp(){
 
     return(
         <>
-            <Button onClick={() => handleOpen()}>Sign up</Button>   
+            <Button
+            className={classes.signButton}
+            onClick={() => handleOpen()}>Sign up</Button>   
             <CustomModal title={'Sign Up'} isOpen={isOpen} onCancel={handleClose} onOk={handleAuth}>
                 <div className="flex flex-col gap-[12px] mt-[36px]">
                     <Input status={authData.username.error ? 'error':''} placeholder="Username" onChange={(e) => {handleChange('username', e.target.value)}}/>

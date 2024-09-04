@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Button, Input } from "antd"
 import CustomModal from "../../ui/modal"
+import classes from "../signStyle.module.scss"
 
 export default function SignIn(){
 
@@ -92,7 +93,9 @@ export default function SignIn(){
 
     return(
         <>
-            <Button onClick={() => handleOpen()}>Sign In</Button>   
+            <Button
+            className={classes.signButton}
+            onClick={() => handleOpen()}>Sign In</Button>   
             <CustomModal title={'Sign In'} isOpen={isOpen} onCancel={handleClose} onOk={handleAuth}>
                 <div className="flex flex-col gap-[12px] mt-[36px]">
                     <Input status={authData.phone_number.error ? 'error':''} placeholder="Number" onChange={(e) => {handleChange('phone_number', e.target.value)}}/>

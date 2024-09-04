@@ -52,6 +52,7 @@
     width: 400px;
     height: 45px;
     color: white;
+    border-bottom: 1px solid #6E48AA;
     input{
         color: white;
     }
@@ -132,4 +133,21 @@
 .profile{
     width: 200px;
     height: 200px;
+}
+.profileWrapper{
+    width: 300px;
+    gap: 10px;
+}
+.profileInsideWrapper{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 8px;
+}
+.line{
+    width: 0px;
+    height: 39px;
+    border: 1px grey solid;
+    margin-left: 9px;
+    margin-right: 9px;
 }
