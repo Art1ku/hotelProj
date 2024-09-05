@@ -11,12 +11,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/*Убрать полосу прокрутки у элемента*/
 .element::-webkit-scrollbar {
   width: 0;
 }
 
-/*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
   width: 0;
 }

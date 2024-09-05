@@ -1,7 +1,8 @@
-import Header from "../components/header"
-import MainSlider from "../components/swiper/slider"
+import Header from "../../components/header/Header"
+import MainSlider from "../../components/swiper/slider"
 import classes from "../styles/Contacts.module.scss"
-import Container from "../components/ui/Container/Container"
+import Container from "../../components/ui/Container/Container"
+import Footer from "../../components/footer/Footer"
 
 export default function Contacts(){
 
@@ -11,7 +12,7 @@ export default function Contacts(){
         <>
             <Header />
             <MainSlider />
-            <div className={classes.wrapper}>
+            <div id="contact" className={classes.wrapper}>
                 <Container>
                     <div className={classes.nameWrapper}>
                         <h1 className={classes.Name}>Contacts </h1>
@@ -23,7 +24,7 @@ export default function Contacts(){
                             <p className={classes.AddresP}>Addres:</p>
                             <p className={classes.CorrectAddres}>Bishkek city, 7 micro reg., 26/2</p>
                         </div>
-                        <iframe className={classes.Map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.2224483588249!2d74.61839624301037!3d42.83007199748102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7000c5a29e3%3A0x61a5d35d76e6095d!2sCodify%20Academy!5e0!3m2!1sru!2skg!4v1725104783456!5m2!1sru!2skg" width="100%" height="518px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe className={classes.Map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.2224483588249!2d74.61839624301037!3d42.83007199748102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7000c5a29e3%3A0x61a5d35d76e6095d!2sCodify%20Academy!5e0!3m2!1sru!2skg!4v1725104783456!5m2!1sru!2skg" width="100%" height="518px"  loading="lazy"></iframe>
                         <div className={classes.gmailsPWrapper}>
                             <div className={classes.gmailPWrapper}> 
                                 <p className={classes.textP}>Booking Department:</p>
@@ -38,8 +39,7 @@ export default function Contacts(){
                     </div>
                 </Container>
             </div>
+            <Footer />
         </>
     )
 }
-
-{/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.2224483588249!2d74.61839624301037!3d42.83007199748102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7000c5a29e3%3A0x61a5d35d76e6095d!2sCodify%20Academy!5e0!3m2!1sru!2skg!4v1725104783456!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}

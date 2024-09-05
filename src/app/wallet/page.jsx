@@ -1,5 +1,6 @@
-import Header from "../components/header"
-import MainSlider from "../components/swiper/slider"
+import Header from "../../components/header/Header"
+import MainSlider from "../../components/swiper/slider"
+import Footer from "../../components/footer/Footer"
 
 export default function Wallet(){
 
@@ -12,6 +13,7 @@ export default function Wallet(){
             <div>
 
             </div>
+            <Footer />
         </>
     )
 }
